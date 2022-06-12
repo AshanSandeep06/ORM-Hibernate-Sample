@@ -7,6 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class Item {
     @Id
+    @Column(name = "itemCode")
     private String code;
     private String description;
     private double unitPrice;
