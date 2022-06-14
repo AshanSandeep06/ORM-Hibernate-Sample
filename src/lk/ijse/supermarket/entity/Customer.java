@@ -10,8 +10,7 @@ import javax.persistence.Transient;
 @Entity
 public class Customer {
     @Id
-    @Column(name = "customerId")
-    private String id;
+    private String customerId;
     private Name name;
     private String address;
     private double salary;
@@ -20,19 +19,19 @@ public class Customer {
 
     }
 
-    public Customer(String id, Name name, String address, double salary) {
-        this.id = id;
+    public Customer(String customerId, Name name, String address, double salary) {
+        this.customerId = customerId;
         this.name = name;
         this.address = address;
         this.salary = salary;
     }
 
     public String getId() {
-        return id;
+        return customerId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String customerId) {
+        this.customerId = customerId;
     }
 
     public Name getName() {
@@ -61,6 +60,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return id+" - "+name.getfName()+" - "+address;
+        return customerId+" - "+name.getfName()+" - "+address;
     }
 }

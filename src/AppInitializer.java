@@ -41,9 +41,9 @@ public class AppInitializer {
         /* -------------------------------------------Customer CRUD---------------------------------------------------- */
 
         // Save ------
-        session.save(c1);
+        /*session.save(c1);
         session.save(c2);
-        session.save(c3);
+        session.save(c3);*/
 
         // Update -------
 //        c3.setAddress("Jaffna");
@@ -70,9 +70,9 @@ public class AppInitializer {
         /* -------------------------------------------Item CRUD---------------------------------------------------- */
 
         // Save ------
-        session.save(i1);
+        /*session.save(i1);
         session.save(i2);
-        session.save(i3);
+        session.save(i3);*/
 
         // Update ------
 //        i3.setQtyOnHand(460);
@@ -94,6 +94,11 @@ public class AppInitializer {
         // 2nd way ***
 //        Item i5 = session.get(Item.class, "I002");
 //        session.delete(i5);
+
+
+        /* -------------------------------------------Order CRUD---------------------------------------------------- */
+
+
 
 
         transaction.commit();
