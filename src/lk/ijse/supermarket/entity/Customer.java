@@ -2,10 +2,9 @@ package lk.ijse.supermarket.entity;
 
 import lk.ijse.supermarket.embedded.Name;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -15,23 +14,19 @@ public class Customer {
     private String address;
     private double salary;
 
+    @OneToMany
+    private List<Orders> ordersList = new ArrayList<>();
+
     public Customer() {
 
     }
 
-    public Customer(String customerId, Name name, String address, double salary) {
+    public Customer(String customerId, Name name, String address, double salary, List<Orders> ordersList) {
         this.customerId = customerId;
         this.name = name;
         this.address = address;
         this.salary = salary;
-    }
-
-    public String getId() {
-        return customerId;
-    }
-
-    public void setId(String customerId) {
-        this.customerId = customerId;
+        this.ordersList = ordersList;
     }
 
     public Name getName() {
@@ -56,6 +51,22 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public List<Orders> getOrdersList() {
+        return ordersList;
+    }
+
+    public void setOrdersList(List<Orders> ordersList) {
+        this.ordersList = ordersList;
     }
 
     @Override

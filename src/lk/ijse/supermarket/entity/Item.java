@@ -3,6 +3,9 @@ package lk.ijse.supermarket.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Item {
@@ -13,15 +16,19 @@ public class Item {
     private double unitPrice;
     private int qtyOnHand;
 
+    @OneToMany
+    private List<OrderDetail> orderDetailList = new ArrayList<>();
+
     public Item() {
 
     }
 
-    public Item(String code, String description, double unitPrice, int qtyOnHand) {
+    public Item(String code, String description, double unitPrice, int qtyOnHand, List<OrderDetail> orderDetailList) {
         this.code = code;
         this.description = description;
         this.unitPrice = unitPrice;
         this.qtyOnHand = qtyOnHand;
+        this.orderDetailList = orderDetailList;
     }
 
     public String getCode() {
@@ -54,6 +61,14 @@ public class Item {
 
     public void setQtyOnHand(int qtyOnHand) {
         this.qtyOnHand = qtyOnHand;
+    }
+
+    public List<OrderDetail> getOrderDetailList() {
+        return orderDetailList;
+    }
+
+    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+        this.orderDetailList = orderDetailList;
     }
 
     @Override

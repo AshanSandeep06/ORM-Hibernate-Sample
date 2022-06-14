@@ -15,19 +15,19 @@ public class AppInitializer {
         Name n3 = new Name("Kasun", "Rajitha", "Weerakulasooriya");
 
         // Customer
-        Customer c1 = new Customer("C001", n1, "Galle", 65000);
-        Customer c2 = new Customer("C002", n2, "Colombo", 45000);
+//        Customer c1 = new Customer("C001", n1, "Galle", 65000);
+//        Customer c2 = new Customer("C002", n2, "Colombo", 45000);
 
         Customer c3 = new Customer();
-        c3.setId("C003");
+        c3.setCustomerId("C003");
         c3.setName(n3);
         c3.setAddress("Kandy");
         c3.setSalary(125000);
 
 
         // Item
-        Item i1 = new Item("I001", "Dhaal", 250.00, 50);
-        Item i2 = new Item("I002", "Rice", 210.00, 40);
+//        Item i1 = new Item("I001", "Dhaal", 250.00, 50);
+//        Item i2 = new Item("I002", "Rice", 210.00, 40);
 
         Item i3 = new Item();
         i3.setCode("I003");
@@ -97,7 +97,6 @@ public class AppInitializer {
 
 
         /* -------------------------------------------Order CRUD---------------------------------------------------- */
-
 
 
 
