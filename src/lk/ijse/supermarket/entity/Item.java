@@ -16,7 +16,7 @@ public class Item {
     private double unitPrice;
     private int qtyOnHand;
 
-    @OneToMany
+    @OneToMany(mappedBy = "item")
     private List<OrderDetail> orderDetailList = new ArrayList<>();
 
     public Item() {

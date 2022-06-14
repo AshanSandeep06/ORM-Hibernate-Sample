@@ -21,7 +21,9 @@ public class FactoryConfiguration {
         } catch (Exception e) {
         }
         Configuration configure = new Configuration().mergeProperties(p).addAnnotatedClass(Customer.class)
-                .addAnnotatedClass(Item.class);
+                .addAnnotatedClass(Item.class)
+                .addAnnotatedClass(Orders.class)
+                .addAnnotatedClass(OrderDetail.class);
         sessionFactory = configure.buildSessionFactory();
     }
 

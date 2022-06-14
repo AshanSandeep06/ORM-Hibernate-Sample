@@ -14,7 +14,7 @@ public class Customer {
     private String address;
     private double salary;
 
-    @OneToMany
+    @OneToMany(mappedBy = "customer")
     private List<Orders> ordersList = new ArrayList<>();
 
     public Customer() {

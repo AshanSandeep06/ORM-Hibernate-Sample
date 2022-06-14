@@ -22,7 +22,7 @@ public class Orders {
     @ManyToOne
     private Customer customer;
 
-    @OneToMany
+    @OneToMany(mappedBy = "orders")
     private List<OrderDetail> orderDetailList = new ArrayList<>();
 
     public Orders() {
