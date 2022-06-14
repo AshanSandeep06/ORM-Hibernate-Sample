@@ -72,4 +72,9 @@ public class Orders {
     public void setOrderDetailList(List<OrderDetail> orderDetailList) {
         this.orderDetailList = orderDetailList;
     }
+
+    @Override
+    public String toString() {
+        return orderId+" - "+localDate+" - "+customer.getCustomerId();
+    }
 }

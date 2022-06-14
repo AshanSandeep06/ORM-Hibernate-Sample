@@ -83,4 +83,9 @@ public class OrderDetail {
     public void setOrders(Orders orders) {
         this.orders = orders;
     }
+
+    @Override
+    public String toString() {
+        return orderDetailID+" - "+orders.getOrderId()+" - "+item.getCode()+" - "+unitPrice+" - "+orderQty;
+    }
 }
